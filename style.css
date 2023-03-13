@@ -21,6 +21,8 @@ body{
 }
 
 h1{
+  margin-left: 1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   text-shadow: 0rem 0.2rem 0.4rem black;
 }
@@ -36,8 +38,12 @@ h1{
   }
   
   .accordion__label {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: black;
+    background-color: rgb(187, 183, 183);;
+    padding: 0.7rem;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -45,31 +51,68 @@ h1{
   }
   
   .accordion__label:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
   }
-  
-    .accordion__label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    width: 12px;
-    height: 6px;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
-    background-size: contain;
-    transition: transform 0.4s;
+
+  .arrow_btn {
+    width: 1.2vw;
+    height: 1.2vh;
+    filter: invert(100%);
+    margin-right: 0.9rem;
+    transition: all 0.4s;
   }
-  
-  .accordion__content {
-    background: #ffffff;
-    line-height: 1.6;
-    font-size: 0.85em;
-    display: none;
+
+  .mem_img {
+    width: 0;
+    height: 0;
+    transition: all 0.4s;
+  }
+
+  .mem_container__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:black;
     transition: all 0.4s;
   }
   
-  .accordion__input {
+  .accordion__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .accordion__input:checked~label .mem_img,
+  .border:hover .mem_img,
+  .border:focus .mem_img {
+    width: 50%;
+    height: 50%;
+    padding: 0.8rem 0;
+  }
+
+  .container:hover .arrow_btn,
+  .container:focus .arrow_btn {
+    background: url('../cssBayan/img/arrow.svg') center/cover no-repeat;
+  }
+
+  .accordion__input:checked~label .arrow_btn,
+  .border:hover .arrow_btn,
+  .border:focus .arrow_btn {
+    transform: rotate(-180deg);
+  }
+
+  .accordion__input:checked~label .mem_container__title,
+  .container:hover .mem_container__title,
+  .container:focus .mem_container__title {
+    color: white;
+    text-shadow: 0.05rem 0.05rem 0.1rem black;
+  }
+  .border,
+  .accordion__label,
+  .mem_img {
+    cursor: pointer;
+  }
+
+  /* .accordion__input {
     display: none;
     
   }
@@ -92,4 +135,4 @@ h1{
     max-height: 320px;
     transition: all 0.4s;
   }
-  
+   */
