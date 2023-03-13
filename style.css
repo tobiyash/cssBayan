@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
   }
+
 *{
     margin: 0;
     padding: 0;
@@ -12,8 +13,6 @@ body{
 .container {
     max-width: 50%;
     margin: 0 auto;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    border-radius: 5px; */
     overflow: hidden;
     font-family: "Quicksand", sans-serif;
     background: #ffffff;
@@ -112,27 +111,60 @@ h1{
     cursor: pointer;
   }
 
-  /* .accordion__input {
-    display: none;
-    
+  @media (max-width: 1200px) {
+    container {
+      max-width: 70%;
+    }
   }
 
-  .accordion__input:hover ~ .accordion__content,
-  .accordion__input:checked ~ .accordion__content {
-    display: block;
-    transition: all 0.4s;
-  }
-  
-  .accordion__input:checked ~ .accordion__label::after {
-    transform: translateY(-50%) rotate(0.5turn);
-    transition: all 0.4s;
+  @media (max-width: 890px) {
+    .mem_container__title {
+      font-size: 0.9rem;
+    }
+    .border:hover .mem_img {
+      width: 0;
+      height: 0;
+      padding: 0;
+    }
+    .arrow_btn {
+      background: url('../assets/arrow.svg') center/cover no-repeat;
+    }
+    .border:hover .arrow_btn {
+      transform: rotate(0);
+    }
+    .container:hover .mem_container__title {
+      color: black;
+      text-shadow: none;
+    }
+    .accordion__input:checked~label .mem_img {
+      width: 70%;
+      height: 70%;
+      padding: 0.5rem 0;
+    }
   }
 
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 320px;
-    max-height: 320px;
-    transition: all 0.4s;
+  @media (max-width: 720px) {
+    .arrow_btn {
+      width: 1.5vw;
+      height: 1.5vh;
+    }
   }
-   */
+
+  @media (max-width: 370px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .mem_container__title {
+      font-size: 0.8rem;
+    }
+    .accordion__label {
+      padding: 0.4rem;
+    }
+    .arrow_btn {
+      margin-right: 0.5rem;
+    }
+    .accordion__input:checked~label .mem_img {
+      width: 90%;
+      height: 90%;
+    }
+  }
