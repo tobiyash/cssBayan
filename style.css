@@ -27,7 +27,7 @@ h1{
 
 .border{
   padding-top: 1rem;
-  border-top: 1px solid;
+  border-top: 0.1rem solid;
 }
   
   .accordion__label,
