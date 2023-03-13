@@ -20,6 +20,7 @@ body{
 }
 
 h1{
+  font-size: 2rem;
   margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -68,7 +69,7 @@ h1{
   }
 
   .mem_container__title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color:black;
     transition: all 0.4s;
@@ -115,11 +116,20 @@ h1{
     container {
       max-width: 70%;
     }
+    .mem_container__title {
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+    }
   }
 
-  @media (max-width: 890px) {
+  @media (max-width: 820px) {
+    h1 {
+      font-size: 1.3rem;
+    }
     .mem_container__title {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
     .border:hover .mem_img {
       width: 0;
@@ -128,6 +138,8 @@ h1{
     }
     .arrow_btn {
       background: url('../assets/arrow.svg') center/cover no-repeat;
+      width: 1.5vw;
+      height: 1.5vh;
     }
     .border:hover .arrow_btn {
       transform: rotate(0);
@@ -143,16 +155,9 @@ h1{
     }
   }
 
-  @media (max-width: 720px) {
-    .arrow_btn {
-      width: 1.5vw;
-      height: 1.5vh;
-    }
-  }
-
   @media (max-width: 370px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
     .mem_container__title {
       font-size: 0.8rem;
