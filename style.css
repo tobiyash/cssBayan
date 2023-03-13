@@ -122,6 +122,10 @@ h1{
     h1 {
       font-size: 1.6rem;
     }
+    .container:hover .mem_container__title {
+      color: black;
+      text-shadow: none;
+    }
   }
 
   @media (max-width: 820px) {
